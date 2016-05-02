@@ -1,4 +1,4 @@
-FROM trenpixster/elixir:1.1.1
+FROM elixir:latest
 
 RUN apt-get update && apt-get install -y \
     postgresql \
