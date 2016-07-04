@@ -1,7 +1,10 @@
-FROM elixir:latest
+FROM elixir:1.2.6
 
 RUN apt-get update && apt-get install -y \
+    build-essential \
     git \
-    postgresql \
-    postgresql-contrib \
-    erlang-dev
+    postgresql-client-9.4 \
+    build-essential \
+    erlang-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
